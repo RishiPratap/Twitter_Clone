@@ -3,8 +3,8 @@ import { logoutUser } from './auth';
 
 export const API_BASE_URL =
   window.location.hostname === 'localhost'
-    ? 'https://twitter-backend-zegv.onrender.com/api'
-    : process.env.REACT_APP_API_URL;
+    ? 'http://localhost:3001/api'
+    : 'https://twitter-backend-zegv.onrender.com/api';
 
 axios.defaults.baseURL = API_BASE_URL;
 

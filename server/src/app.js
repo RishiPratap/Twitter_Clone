@@ -31,6 +31,7 @@ passport.use('jwt', jwtStrategy);
 
 // Handle routes
 app.use('/api', getRoutes());
+app.get('/', (req, res) => res.send('Welcome to the Twitter API!'));
 
 if (config.env === 'development' || config.env === 'test') {
   app.use('/testData', testDataRoutes);
